@@ -30,7 +30,6 @@ class RegistrUserView(CreateAPIView):
 
 
 @api_view(['GET'])
-@permission_classes(IsAuthenticated,)
 def user_list_view(request):
     if request.method == "GET":
         users = UserApp.objects.all()
@@ -39,7 +38,7 @@ def user_list_view(request):
 
 
 @api_view(['GET'])
-@permission_classes(IsAuthenticated,)
+# @permission_classes(IsAuthenticated,)
 def user_detail_view(request, pk):
     try:
         user_detail = UserApp.objects.get(id=pk)
@@ -52,7 +51,7 @@ def user_detail_view(request, pk):
 
 
 @api_view(['PUT'])
-@permission_classes(IsAuthenticated,)
+# @permission_classes(IsAuthenticated,)
 def user_update_view(request, pk):
     try:
         user_detail = UserApp.objects.get(id=pk)
@@ -74,7 +73,7 @@ def user_update_view(request, pk):
 
 
 @api_view(['DELETE'])
-@permission_classes(IsAuthenticated,)
+# @permission_classes(IsAuthenticated,)
 def user_delete_view(request, pk):
     try:
         user_detail = UserApp.objects.get(id=pk)
