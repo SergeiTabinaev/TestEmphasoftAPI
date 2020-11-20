@@ -3,7 +3,12 @@ from . import views
 
 
 urlpatterns = [
-    path('profiles/', views.UserAppListView.as_view()),
-    path('profile/<int:pk>/', views.UserAppView.as_view({'post': 'create', 'get': 'retrieve', 'put': 'update', 'delete': 'destroy'})),
+    path('users/create/', views.RegistrUserView.as_view(), name='create'),
+
+    path('users/', views.user_list_view, name='list'),
+    path('users/<int:pk>/', views.user_detail_view, name='detail'),
+    path('users/<int:pk>/update', views.user_update_view, name='update'),
+    path('users/<int:pk>/delete', views.user_delete_view, name='delete'),
+
 ]
 
