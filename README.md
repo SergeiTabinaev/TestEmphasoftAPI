@@ -12,7 +12,9 @@
 
 Активировать виртуальное окружение 
 
-В папке config в файле settings.py прописать конект к БД 
+В файле .env прописать конект к БД. сделать миграции: manage.py migrate, manage.py migrate. 
+
+Cоздать суперпользователя: manage.py createsuperuser
 
 Устанавливить зависимости: pip install -r req.txt 
 
