@@ -12,7 +12,7 @@
 
 Активировать виртуальное окружение 
 
-В файле .env прописать конект к БД. сделать миграции: manage.py migrate, manage.py migrate. 
+В файле .env прописать конект к БД. сделать миграции: manage.py makemigrations, manage.py migrate. 
 
 Cоздать суперпользователя: manage.py createsuperuser
 
